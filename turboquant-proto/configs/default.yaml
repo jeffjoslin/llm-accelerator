@@ -1,0 +1,18 @@
+model: "Qwen/Qwen2.5-1.5B-Instruct"
+fallback_model: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+mode: "baseline"              # baseline | int4_naive | turboquant_mse | turboquant_full
+bits: 4
+quantize_keys: true
+quantize_values: true
+rotation_enabled: true
+rotation_type: "full"         # full | blockwise
+block_size: 64                # for blockwise rotation
+qjl_enabled: false            # only true for turboquant_full
+seed: 42
+max_new_tokens: 256
+device: "cpu"                 # or "mps" for Apple Silicon
+num_runs: 3
+prompts:
+  short: "Explain the theory of general relativity in simple terms, covering the key concepts of spacetime curvature, gravitational time dilation, and the equivalence principle. Provide at least one real-world example for each concept."
+  medium: null                # loaded from file or generated at runtime
+  long: null                  # loaded from file or generated at runtime
