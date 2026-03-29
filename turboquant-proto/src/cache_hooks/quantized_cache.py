@@ -153,6 +153,7 @@ class TurboQuantCache:
         self._seen_tokens = 0
         # Track key/value shapes for seq_length computation
         self._seq_lengths: list[int] = []
+        self._dtype: Optional[torch.dtype] = None  # track input dtype for dequant
 
     def update(
         self,
@@ -178,6 +179,10 @@ class TurboQuantCache:
             self._compressed_values.append([])
             self._seq_lengths.append(0)
 
+        # Track input dtype for casting dequantized output
+        if self._dtype is None:
+            self._dtype = key_states.dtype
+
         # Track tokens (only count from layer 0)
         if layer_idx == 0:
             self._seen_tokens += key_states.shape[2]
@@ -197,7 +202,11 @@ class TurboQuantCache:
     def _dequantize_all(self, compressed_list: list, quantizer) -> torch.Tensor:
         """Dequantize and concatenate all chunks for a layer."""
         chunks = [quantizer.dequantize(c) for c in compressed_list]
-        return torch.cat(chunks, dim=2)  # cat along seq dim
+        result = torch.cat(chunks, dim=2)  # cat along seq dim
+        # Cast back to original dtype (quantization works in float32 internally)
+        if self._dtype is not None and result.dtype != self._dtype:
+            result = result.to(self._dtype)
+        return result
 
     def get_seq_length(self, layer_idx: int = 0) -> int:
         if layer_idx >= len(self._seq_lengths):
@@ -233,3 +242,59 @@ class TurboQuantCache:
     def reorder_cache(self, beam_idx: torch.LongTensor):
         """Reorder cache for beam search — not supported with compression."""
         raise NotImplementedError("Beam search not supported with TurboQuant cache")
+
+    # ---------- Compatibility with transformers >= 5.x ----------
+    # Transformers expects a `layers` attribute for mask construction.
+    # We provide a lightweight shim that exposes get_mask_sizes per layer.
+
+    class _FakeLayer:
+        """Minimal shim so cache.layers[i].get_mask_sizes works."""
+        def __init__(self, seq_len: int):
+            self._seq_len = seq_len
+            self.is_sliding = False
+
+        def get_mask_sizes(self, query_length: int) -> tuple[int, int]:
+            kv_length = self._seq_len + query_length
+            return kv_length, 0
+
+    @property
+    def layers(self) -> list:
+        return [self._FakeLayer(sl) for sl in self._seq_lengths]
+
+    def get_mask_sizes(self, query_length: int, layer_idx: int = 0) -> tuple[int, int]:
+        """Return (kv_length, kv_offset) for causal mask construction."""
+        if layer_idx >= len(self._seq_lengths):
+            return query_length, 0
+        return self._seq_lengths[layer_idx] + query_length, 0
+
+    def get_max_cache_shape(self) -> Optional[int]:
+        return None
+
+    @property
+    def is_sliding(self) -> list[bool]:
+        return [False] * len(self._seq_lengths)
+
+    @property
+    def is_compileable(self) -> bool:
+        return False
+
+    @property
+    def is_initialized(self) -> bool:
+        return len(self._compressed_keys) > 0
+
+    @property
+    def max_batch_size(self) -> int:
+        return 0
+
+    @property
+    def max_cache_len(self) -> Optional[int]:
+        return None
+
+    def crop(self, max_length: int) -> None:
+        pass
+
+    def reset(self) -> None:
+        self._compressed_keys.clear()
+        self._compressed_values.clear()
+        self._seq_lengths.clear()
+        self._seen_tokens = 0

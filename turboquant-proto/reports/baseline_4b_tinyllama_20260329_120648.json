@@ -1,0 +1,39 @@
+{
+  "benchmark_type": "quantized",
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "device": "mps",
+  "dtype": "float32",
+  "mode": "baseline",
+  "bits": 4,
+  "quantize_keys": true,
+  "quantize_values": true,
+  "rotation_type": "full",
+  "max_new_tokens": 64,
+  "seed": 42,
+  "timestamp": "2026-03-29T12:06:48.808063",
+  "results": [
+    {
+      "prompt_label": "short",
+      "num_runs": 1,
+      "mean_decode_tok_per_sec": 62.0,
+      "runs": [
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 62,
+          "max_new_tokens": 64,
+          "generated_tokens": 64,
+          "total_time_s": 2.0322,
+          "ttft_approx_s": 1.0,
+          "decode_tok_per_sec": 62.0,
+          "mem_before_mb": 2711.7,
+          "mem_after_mb": 1459.9,
+          "peak_mem_mb": 6562.8,
+          "output_text": "General Relativity (GR) is a theory that describes the nature of gravity as a curvature of spacetime. It is based on the principle that the laws of physics are the same in all inertial frames of reference, regardless of the observer's location.\n\nThe key concepts of GR are:\n",
+          "seed": 42,
+          "mode": "baseline",
+          "bits": 4
+        }
+      ]
+    }
+  ]
+}

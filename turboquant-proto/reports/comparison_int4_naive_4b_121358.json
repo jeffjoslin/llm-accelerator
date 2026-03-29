@@ -1,0 +1,43 @@
+{
+  "baseline_file": "reports/baseline_qwen2_5-1_5b-instruct_20260329_120823.json",
+  "candidate_file": "reports/int4_naive_4b_qwen2_5-1_5b-instruct_20260329_121358.json",
+  "baseline_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "candidate_mode": "int4_naive",
+  "candidate_bits": 4,
+  "comparisons": [
+    {
+      "prompt_label": "short",
+      "exact_match": false,
+      "char_similarity": 0.1874,
+      "rouge_l": {
+        "precision": 0.1061,
+        "recall": 0.0354,
+        "f1": 0.053
+      },
+      "baseline_tok_per_sec": 46.18,
+      "candidate_tok_per_sec": 6.81,
+      "speed_ratio": 0.147,
+      "baseline_peak_mem_mb": 3386.9,
+      "candidate_peak_mem_mb": 4835.0,
+      "baseline_output_preview": "General Relativity is a fundamental theory in physics that describes gravity as a curvature of spacetime caused by mass and energy. Here's an explanation of its key concepts:\n\n1. **Spacetime Curvature",
+      "candidate_output_preview": "\n\n\n\n\n \n\n\n\n\n\n\n\n\n time\n\n to time\n\n\n\n\n\n\n\n\n\n\n\n\n\n not\n\n:\n\n\n\n\n\n\\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n timing\n\n\n\n\n\n\n\n\n\n\n\n\n\npage time none\n\nthelegen\n\n\nunde\n\n\n\n\n\n\n\n\n\nley\n\n\n\n\n\n\n\n limp part\n\n let\n\n\n\n if\u30a7 time\n\n\n\n\n\n\n\n the the the one"
+    },
+    {
+      "prompt_label": "medium",
+      "exact_match": false,
+      "char_similarity": 0.2661,
+      "rouge_l": {
+        "precision": 0.0329,
+        "recall": 0.0282,
+        "f1": 0.0304
+      },
+      "baseline_tok_per_sec": 72.77,
+      "candidate_tok_per_sec": 9.93,
+      "speed_ratio": 0.136,
+      "baseline_peak_mem_mb": 3419.1,
+      "candidate_peak_mem_mb": 4875.2,
+      "baseline_output_preview": "# Modern Transformer-Based Language Models: A Comprehensive Overview\n\n## Introduction\n\nModern transformer-based language models have revolutionized natural language processing (NLP) by achieving state",
+      "candidate_output_preview": "(VILLE - anythingso\\n of I\uc744 conclude\u00a0 \\n  .. consequently  is\\r not some \u00b7 \\.\\ can be these. C\\n state number \u00b7  \u2013 therefore may\\n significant [\\ currently\\n such\n Yes  or .\n\n\n\n close  \\ =[\\n[`` is. \n"
+    }
+  ]
+}

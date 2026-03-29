@@ -15,23 +15,24 @@ import numpy as np
 import torch
 
 
-def _beta_pdf(z: np.ndarray, d: int) -> np.ndarray:
+def _beta_pdf(x: np.ndarray, d: int) -> np.ndarray:
     """PDF of a single coordinate after random rotation of a unit vector.
 
-    The distribution is Beta(1/2, (d-1)/2) rescaled to [-1/√d, +1/√d].
-    PDF: f(z) ∝ (1 - d·z²)^((d-3)/2)  for z ∈ [-1/√d, +1/√d]
+    From the paper (Lemma 1): if x ∈ S^{d-1} is uniform on the unit sphere,
+    each coordinate follows:
+        f_X(x) = Γ(d/2) / (√π · Γ((d-1)/2)) · (1 - x²)^((d-3)/2)
+    for x ∈ [-1, 1].
 
     Args:
-        z: Array of coordinate values.
+        x: Array of coordinate values in [-1, 1].
         d: Vector dimension.
 
     Returns:
         Unnormalized density values.
     """
-    bound = 1.0 / math.sqrt(d)
-    pdf = np.zeros_like(z)
-    mask = np.abs(z) < bound
-    inner = 1.0 - d * z[mask] ** 2
+    pdf = np.zeros_like(x)
+    mask = np.abs(x) < 1.0
+    inner = 1.0 - x[mask] ** 2
     # Clamp for numerical stability
     inner = np.maximum(inner, 0.0)
     exponent = (d - 3) / 2.0
@@ -55,16 +56,20 @@ def _lloyd_max(d: int, num_levels: int, max_iter: int = 500, tol: float = 1e-10)
     Returns:
         Sorted array of codebook centroids, shape (num_levels,).
     """
-    bound = 1.0 / math.sqrt(d)
+    # The support is [-1, 1] but mass concentrates near 0 for large d.
+    # Use a practical bound that captures >99.99% of the mass.
+    # For the Beta distribution on the sphere, std ≈ 1/√d.
+    # Use ±min(1, 5/√d) to capture the tails without wasting grid resolution.
+    practical_bound = min(1.0, 5.0 / math.sqrt(d))
     # Fine grid for numerical integration
     num_points = 100_000
-    z = np.linspace(-bound, bound, num_points)
+    z = np.linspace(-practical_bound, practical_bound, num_points)
     dz = z[1] - z[0]
     pdf = _beta_pdf(z, d)
     pdf = pdf / (pdf.sum() * dz)  # normalize
 
-    # Initialize centroids uniformly
-    centroids = np.linspace(-bound * 0.9, bound * 0.9, num_levels)
+    # Initialize centroids uniformly within the practical range
+    centroids = np.linspace(-practical_bound * 0.9, practical_bound * 0.9, num_levels)
 
     for _ in range(max_iter):
         # Assign each grid point to nearest centroid
@@ -105,14 +110,16 @@ def compute_codebook(bits: int, dim: int) -> torch.Tensor:
         raise ValueError(f"bits must be 1-8, got {bits}")
 
     num_levels = 1 << bits
-    scale = 1.0 / math.sqrt(dim)
 
+    # Clear LRU cache since codebook computation has changed
     if bits == 1:
         # Closed-form from paper: ±√(2/(πd))
+        # These are on the [-1, 1] scale (coordinate of unit vector on sphere)
         val = math.sqrt(2.0 / (math.pi * dim))
         centroids = np.array([-val, val])
     elif bits == 2:
-        # Closed-form from paper
+        # Closed-form from paper: ±0.453/√d, ±1.51/√d
+        scale = 1.0 / math.sqrt(dim)
         centroids = np.array([-1.51 * scale, -0.453 * scale, 0.453 * scale, 1.51 * scale])
     else:
         # Lloyd-Max numerical optimization
@@ -148,4 +155,4 @@ def codebook_lookup(indices: torch.Tensor, codebook: torch.Tensor) -> torch.Tens
     Returns:
         Tensor of shape (..., d) with codebook values.
     """
-    return codebook.to(torch.float32)[indices.long()]
+    return codebook.to(device=indices.device, dtype=torch.float32)[indices.long()]

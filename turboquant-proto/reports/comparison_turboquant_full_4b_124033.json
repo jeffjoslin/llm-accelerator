@@ -1,0 +1,43 @@
+{
+  "baseline_file": "reports/baseline_qwen2_5-1_5b-instruct_20260329_120823.json",
+  "candidate_file": "reports/turboquant_full_4b_qwen2_5-1_5b-instruct_20260329_124033.json",
+  "baseline_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "candidate_mode": "turboquant_full",
+  "candidate_bits": 4,
+  "comparisons": [
+    {
+      "prompt_label": "short",
+      "exact_match": false,
+      "char_similarity": 0.1717,
+      "rouge_l": {
+        "precision": 0.0411,
+        "recall": 0.0152,
+        "f1": 0.0221
+      },
+      "baseline_tok_per_sec": 46.18,
+      "candidate_tok_per_sec": 2.33,
+      "speed_ratio": 0.05,
+      "baseline_peak_mem_mb": 3386.9,
+      "candidate_peak_mem_mb": 3754.9,
+      "baseline_output_preview": "General Relativity is a fundamental theory in physics that describes gravity as a curvature of spacetime caused by mass and energy. Here's an explanation of its key concepts:\n\n1. **Spacetime Curvature",
+      "candidate_output_preview": " then,\n\nrel, \n\n\n:Q,,,,,,..,..,el. \"The..,\n\nity, The,relit\n\n To\n\n\n\nrel. not are Q Q.a -.., you letrelrel.,,, le,,,the,, the,.,rel Q,ere, therel, Q, re,then,,,,,,,,,,en theyeth,\n\n,\n\netenq,ene.r qrel e Q"
+    },
+    {
+      "prompt_label": "medium",
+      "exact_match": false,
+      "char_similarity": 0.1627,
+      "rouge_l": {
+        "precision": 0.0989,
+        "recall": 0.0508,
+        "f1": 0.0672
+      },
+      "baseline_tok_per_sec": 72.77,
+      "candidate_tok_per_sec": 3.39,
+      "speed_ratio": 0.047,
+      "baseline_peak_mem_mb": 3419.1,
+      "candidate_peak_mem_mb": 3787.1,
+      "baseline_output_preview": "# Modern Transformer-Based Language Models: A Comprehensive Overview\n\n## Introduction\n\nModern transformer-based language models have revolutionized natural language processing (NLP) by achieving state",
+      "candidate_output_preview": ".\n . al.en. . en.......a ne. can. is... he Q. q. Q.... ne.e......an.?.....\n. A In Q.. able......... and ine.. its is.e that of\n\n\n\n\n\n. many.. ne t?\n\n.\n\n\n\n\n\n [..\\n. Q Q on.\n\n.. it\n\n one Q..., It to\\...\n"
+    }
+  ]
+}

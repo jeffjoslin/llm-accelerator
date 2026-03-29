@@ -1,0 +1,126 @@
+{
+  "benchmark_type": "quantized",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "mps",
+  "dtype": "float16",
+  "mode": "turboquant_mse",
+  "bits": 4,
+  "quantize_keys": true,
+  "quantize_values": true,
+  "rotation_type": "full",
+  "max_new_tokens": 256,
+  "seed": 42,
+  "timestamp": "2026-03-29T12:22:15.092166",
+  "results": [
+    {
+      "prompt_label": "short",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 5.2,
+      "runs": [
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 63.0316,
+          "ttft_approx_s": 13.5344,
+          "decode_tok_per_sec": 5.17,
+          "mem_before_mb": 1609.9,
+          "mem_after_mb": 2161.9,
+          "peak_mem_mb": 4858.9,
+          "output_text": " Wen\n\n.-ex.-w\n\n-w.....-wait-witen..-w-w..  wen-wa-ww. wit...  wen w. ...  .  1 .  . ... .... . .... ...........  ...-was.w.........  ........  ... .. ..   ..... w.ew.ew.eww...  . ...  .. ....ien. .......  ........ew..ewewww.............   .woge.ew.   I.....  . . .   .....w.ew.   ... . <.w.... ..   . ....w....",
+          "seed": 42,
+          "mode": "turboquant_mse",
+          "bits": 4
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 62.3727,
+          "ttft_approx_s": 13.3929,
+          "decode_tok_per_sec": 5.23,
+          "mem_before_mb": 2160.2,
+          "mem_after_mb": 2400.2,
+          "peak_mem_mb": 4858.9,
+          "output_text": " Wen\n\n.-ex.-w\n\n-w.....-wait-witen..-w-w..  wen-wa-ww. wit...  wen w. ...  .  1 .  . ... .... . .... ...........  ...-was.w.........  ........  ... .. ..   ..... w.ew.ew.eww...  . ...  .. ....ien. .......  ........ew..ewewww.............   .woge.ew.   I.....  . . .   .....w.ew.   ... . <.w.... ..   . ....w....",
+          "seed": 42,
+          "mode": "turboquant_mse",
+          "bits": 4
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 62.5932,
+          "ttft_approx_s": 13.4403,
+          "decode_tok_per_sec": 5.21,
+          "mem_before_mb": 2399.2,
+          "mem_after_mb": 2636.4,
+          "peak_mem_mb": 4858.9,
+          "output_text": " Wen\n\n.-ex.-w\n\n-w.....-wait-witen..-w-w..  wen-wa-ww. wit...  wen w. ...  .  1 .  . ... .... . .... ...........  ...-was.w.........  ........  ... .. ..   ..... w.ew.ew.eww...  . ...  .. ....ien. .......  ........ew..ewewww.............   .woge.ew.   I.....  . . .   .....w.ew.   ... . <.w.... ..   . ....w....",
+          "seed": 42,
+          "mode": "turboquant_mse",
+          "bits": 4
+        }
+      ]
+    },
+    {
+      "prompt_label": "medium",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 7.42,
+      "runs": [
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 65.1026,
+          "ttft_approx_s": 30.1628,
+          "decode_tok_per_sec": 7.33,
+          "mem_before_mb": 2635.6,
+          "mem_after_mb": 3389.0,
+          "peak_mem_mb": 4891.1,
+          "output_text": " word\n\n\n\n encode\n\n. . write you can know? . learn ........\n\n. ......................... encult......encode.   ........ encoding  ................. ..... .......................................... encode................................... encode. send.... encoding. encode encode encode............... encode. encode.......................... encode. you.   -........ encode encode encode encode encode.",
+          "seed": 42,
+          "mode": "turboquant_mse",
+          "bits": 4
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 63.8852,
+          "ttft_approx_s": 29.5988,
+          "decode_tok_per_sec": 7.47,
+          "mem_before_mb": 3389.4,
+          "mem_after_mb": 3627.9,
+          "peak_mem_mb": 4891.1,
+          "output_text": " word\n\n\n\n encode\n\n. . write you can know? . learn ........\n\n. ......................... encult......encode.   ........ encoding  ................. ..... .......................................... encode................................... encode. send.... encoding. encode encode encode............... encode. encode.......................... encode. you.   -........ encode encode encode encode encode.",
+          "seed": 42,
+          "mode": "turboquant_mse",
+          "bits": 4
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 64.0405,
+          "ttft_approx_s": 29.6707,
+          "decode_tok_per_sec": 7.45,
+          "mem_before_mb": 3626.9,
+          "mem_after_mb": 3864.6,
+          "peak_mem_mb": 4891.1,
+          "output_text": " word\n\n\n\n encode\n\n. . write you can know? . learn ........\n\n. ......................... encult......encode.   ........ encoding  ................. ..... .......................................... encode................................... encode. send.... encoding. encode encode encode............... encode. encode.......................... encode. you.   -........ encode encode encode encode encode.",
+          "seed": 42,
+          "mode": "turboquant_mse",
+          "bits": 4
+        }
+      ]
+    }
+  ]
+}

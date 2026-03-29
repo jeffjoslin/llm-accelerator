@@ -1,0 +1,126 @@
+{
+  "benchmark_type": "quantized",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "mps",
+  "dtype": "float16",
+  "mode": "turboquant_full",
+  "bits": 3,
+  "quantize_keys": true,
+  "quantize_values": true,
+  "rotation_type": "full",
+  "max_new_tokens": 256,
+  "seed": 42,
+  "timestamp": "2026-03-29T12:48:53.983826",
+  "results": [
+    {
+      "prompt_label": "short",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 2.4,
+      "runs": [
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 135.3178,
+          "ttft_approx_s": 29.056,
+          "decode_tok_per_sec": 2.41,
+          "mem_before_mb": 1610.1,
+          "mem_after_mb": 2427.3,
+          "peak_mem_mb": 3730.9,
+          "output_text": "\n\n notand\u00a0\n\n\n,,.a we,ev,en and can , with\n you they and and...\\n And andand and andou.. and; on and  and andaren around...... . and it and.. and and and and... and and. and and and and and, and and and. and and. and and and. and here and and and, andwe and.rene.. and and.a then if with orat and.. and and and and andand and and and and and andand and and and and and and and and and and and and and and and and and and father andA again and. and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and were and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 3
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 135.7217,
+          "ttft_approx_s": 29.1427,
+          "decode_tok_per_sec": 2.4,
+          "mem_before_mb": 2430.0,
+          "mem_after_mb": 2897.2,
+          "peak_mem_mb": 3730.9,
+          "output_text": "\n\n notand\u00a0\n\n\n,,.a we,ev,en and can , with\n you they and and...\\n And andand and andou.. and; on and  and andaren around...... . and it and.. and and and and... and and. and and and and and, and and and. and and. and and and. and here and and and, andwe and.rene.. and and.a then if with orat and.. and and and and andand and and and and and andand and and and and and and and and and and and and and and and and and and father andA again and. and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and were and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 3
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 135.6175,
+          "ttft_approx_s": 29.1203,
+          "decode_tok_per_sec": 2.4,
+          "mem_before_mb": 2898.5,
+          "mem_after_mb": 3365.7,
+          "peak_mem_mb": 3730.9,
+          "output_text": "\n\n notand\u00a0\n\n\n,,.a we,ev,en and can , with\n you they and and...\\n And andand and andou.. and; on and  and andaren around...... . and it and.. and and and and... and and. and and and and and, and and and. and and. and and and. and here and and and, andwe and.rene.. and and.a then if with orat and.. and and and and andand and and and and and andand and and and and and and and and and and and and and and and and and and father andA again and. and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and were and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 3
+        }
+      ]
+    },
+    {
+      "prompt_label": "medium",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 80.43,
+      "runs": [
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 32,
+          "total_time_s": 3.1611,
+          "ttft_approx_s": 2.7612,
+          "decode_tok_per_sec": 80.04,
+          "mem_before_mb": 3367.2,
+          "mem_after_mb": 3386.5,
+          "peak_mem_mb": 3739.0,
+          "output_text": " ((./ for`., \"=\\\"/, such,,,,,</ ,,,, have,,, and .\n,,",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 3
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 32,
+          "total_time_s": 3.1368,
+          "ttft_approx_s": 2.7401,
+          "decode_tok_per_sec": 80.66,
+          "mem_before_mb": 3386.7,
+          "mem_after_mb": 3397.4,
+          "peak_mem_mb": 3739.0,
+          "output_text": " ((./ for`., \"=\\\"/, such,,,,,</ ,,,, have,,, and .\n,,",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 3
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 32,
+          "total_time_s": 3.1397,
+          "ttft_approx_s": 2.7426,
+          "decode_tok_per_sec": 80.58,
+          "mem_before_mb": 3397.6,
+          "mem_after_mb": 3407.2,
+          "peak_mem_mb": 3739.0,
+          "output_text": " ((./ for`., \"=\\\"/, such,,,,,</ ,,,, have,,, and .\n,,",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 3
+        }
+      ]
+    }
+  ]
+}

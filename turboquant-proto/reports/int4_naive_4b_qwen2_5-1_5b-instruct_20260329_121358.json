@@ -1,0 +1,126 @@
+{
+  "benchmark_type": "quantized",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "mps",
+  "dtype": "float16",
+  "mode": "int4_naive",
+  "bits": 4,
+  "quantize_keys": true,
+  "quantize_values": true,
+  "rotation_type": "full",
+  "max_new_tokens": 256,
+  "seed": 42,
+  "timestamp": "2026-03-29T12:13:58.238231",
+  "results": [
+    {
+      "prompt_label": "short",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 6.96,
+      "runs": [
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 47.8405,
+          "ttft_approx_s": 10.2725,
+          "decode_tok_per_sec": 6.81,
+          "mem_before_mb": 1610.9,
+          "mem_after_mb": 2027.8,
+          "peak_mem_mb": 4835.0,
+          "output_text": "\n\n\n\n\n \n\n\n\n\n\n\n\n\n time\n\n to time\n\n\n\n\n\n\n\n\n\n\n\n\n\n not\n\n:\n\n\n\n\n\n\\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n timing\n\n\n\n\n\n\n\n\n\n\n\n\n\npage time none\n\nthelegen\n\n\nunde\n\n\n\n\n\n\n\n\n\nley\n\n\n\n\n\n\n\n limp part\n\n let\n\n\n\n if\u30a7 time\n\n\n\n\n\n\n\n the the the one\n\n\n\n to time time\n\n\n\n not time\n\n\n\n\n\n be\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time\n\n membrane\n\n\n\n\u3000\n\n\u043e\u0439\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time time\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n set\n\n\n\n\n\n\n\n\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n back\n\n\n\nVILLE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n let let set set set\n\n\n\n\n\n\n\n\n\n\n\n\n\n let set set\n\n\n\n region\n\nentity\n\n\n\n\n\n\n\n\n\n\n\n\n\n let\n\n\n\n there\n\n exist\n\ning\n\n let where set set\n\n set\n\n\n\n let time\n\n\n\n\n\n\n\n time\n\n time\n\n set with\n\n\n\n place\n\n\n\n\n\n\n\n timelet",
+          "seed": 42,
+          "mode": "int4_naive",
+          "bits": 4
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 46.3076,
+          "ttft_approx_s": 9.9434,
+          "decode_tok_per_sec": 7.04,
+          "mem_before_mb": 2023.4,
+          "mem_after_mb": 2264.4,
+          "peak_mem_mb": 4843.0,
+          "output_text": "\n\n\n\n\n \n\n\n\n\n\n\n\n\n time\n\n to time\n\n\n\n\n\n\n\n\n\n\n\n\n\n not\n\n:\n\n\n\n\n\n\\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n timing\n\n\n\n\n\n\n\n\n\n\n\n\n\npage time none\n\nthelegen\n\n\nunde\n\n\n\n\n\n\n\n\n\nley\n\n\n\n\n\n\n\n limp part\n\n let\n\n\n\n if\u30a7 time\n\n\n\n\n\n\n\n the the the one\n\n\n\n to time time\n\n\n\n not time\n\n\n\n\n\n be\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time\n\n membrane\n\n\n\n\u3000\n\n\u043e\u0439\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time time\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n set\n\n\n\n\n\n\n\n\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n back\n\n\n\nVILLE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n let let set set set\n\n\n\n\n\n\n\n\n\n\n\n\n\n let set set\n\n\n\n region\n\nentity\n\n\n\n\n\n\n\n\n\n\n\n\n\n let\n\n\n\n there\n\n exist\n\ning\n\n let where set set\n\n set\n\n\n\n let time\n\n\n\n\n\n\n\n time\n\n time\n\n set with\n\n\n\n place\n\n\n\n\n\n\n\n timelet",
+          "seed": 42,
+          "mode": "int4_naive",
+          "bits": 4
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 46.3015,
+          "ttft_approx_s": 9.942,
+          "decode_tok_per_sec": 7.04,
+          "mem_before_mb": 2260.4,
+          "mem_after_mb": 2499.9,
+          "peak_mem_mb": 4843.0,
+          "output_text": "\n\n\n\n\n \n\n\n\n\n\n\n\n\n time\n\n to time\n\n\n\n\n\n\n\n\n\n\n\n\n\n not\n\n:\n\n\n\n\n\n\\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n timing\n\n\n\n\n\n\n\n\n\n\n\n\n\npage time none\n\nthelegen\n\n\nunde\n\n\n\n\n\n\n\n\n\nley\n\n\n\n\n\n\n\n limp part\n\n let\n\n\n\n if\u30a7 time\n\n\n\n\n\n\n\n the the the one\n\n\n\n to time time\n\n\n\n not time\n\n\n\n\n\n be\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time\n\n membrane\n\n\n\n\u3000\n\n\u043e\u0439\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time time\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n set\n\n\n\n\n\n\n\n\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n time\n\n\n\n\n\n\n\n\n\n\n\n\n\n back\n\n\n\nVILLE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n let let set set set\n\n\n\n\n\n\n\n\n\n\n\n\n\n let set set\n\n\n\n region\n\nentity\n\n\n\n\n\n\n\n\n\n\n\n\n\n let\n\n\n\n there\n\n exist\n\ning\n\n let where set set\n\n set\n\n\n\n let time\n\n\n\n\n\n\n\n time\n\n time\n\n set with\n\n\n\n place\n\n\n\n\n\n\n\n timelet",
+          "seed": 42,
+          "mode": "int4_naive",
+          "bits": 4
+        }
+      ]
+    },
+    {
+      "prompt_label": "medium",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 10.07,
+      "runs": [
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 48.049,
+          "ttft_approx_s": 22.2617,
+          "decode_tok_per_sec": 9.93,
+          "mem_before_mb": 2497.1,
+          "mem_after_mb": 3251.4,
+          "peak_mem_mb": 4875.2,
+          "output_text": "(VILLE - anythingso\\n of I\uc744 conclude\u00a0 \\n  .. consequently  is\\r not some \u00b7 \\.\\ can be these. C\\n state number \u00b7  \u2013 therefore may\\n significant [\\ currently\\n such\n Yes  or .\n\n\n\n close  \\ =[\\n[`` is. \n see thus  \n\\conan/ \\ another \\\u3010 important  contains\\\" conference PS[= this especially coaststandard[n  \u2013 **** on < not\n\u2013 \u2013 an * \u2013 \u2013 \u2013 \u2013 \u2013 >\\n\n\n ### = bet\\ \\\\  \u2013 consequently \\ con called please consequently ... justpost \u2013 \u2013[\u2022\u00a0 \u2013possibly . == \u2013 .\u00a0The con  \u2013###\\ \u2026 -  \u2013\u2026/ important thus \\[con [ consequently  Bin\u6b63\u5728\\  consequently is> consequently[Bin \u2022 con. A The \u2013is...[  Consequently  and  Schedule \u2013[ nothing -n new[in: several\u2013  Security In many numerous consequently Standard \u2022 consequently  \u2013   Mathematics      \u2013 \u2013 be The \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 very \u2013 \u2013 \u2013  \u2013  and \u2013 \u2013 \u2013 \u2013 assume \u2013  \u2013\u2026 significant State The \u2022 ....\u2026\u2026\u2026",
+          "seed": 42,
+          "mode": "int4_naive",
+          "bits": 4
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 46.937,
+          "ttft_approx_s": 21.7465,
+          "decode_tok_per_sec": 10.16,
+          "mem_before_mb": 3249.1,
+          "mem_after_mb": 3488.6,
+          "peak_mem_mb": 4875.2,
+          "output_text": "(VILLE - anythingso\\n of I\uc744 conclude\u00a0 \\n  .. consequently  is\\r not some \u00b7 \\.\\ can be these. C\\n state number \u00b7  \u2013 therefore may\\n significant [\\ currently\\n such\n Yes  or .\n\n\n\n close  \\ =[\\n[`` is. \n see thus  \n\\conan/ \\ another \\\u3010 important  contains\\\" conference PS[= this especially coaststandard[n  \u2013 **** on < not\n\u2013 \u2013 an * \u2013 \u2013 \u2013 \u2013 \u2013 >\\n\n\n ### = bet\\ \\\\  \u2013 consequently \\ con called please consequently ... justpost \u2013 \u2013[\u2022\u00a0 \u2013possibly . == \u2013 .\u00a0The con  \u2013###\\ \u2026 -  \u2013\u2026/ important thus \\[con [ consequently  Bin\u6b63\u5728\\  consequently is> consequently[Bin \u2022 con. A The \u2013is...[  Consequently  and  Schedule \u2013[ nothing -n new[in: several\u2013  Security In many numerous consequently Standard \u2022 consequently  \u2013   Mathematics      \u2013 \u2013 be The \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 very \u2013 \u2013 \u2013  \u2013  and \u2013 \u2013 \u2013 \u2013 assume \u2013  \u2013\u2026 significant State The \u2022 ....\u2026\u2026\u2026",
+          "seed": 42,
+          "mode": "int4_naive",
+          "bits": 4
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 47.105,
+          "ttft_approx_s": 21.8243,
+          "decode_tok_per_sec": 10.13,
+          "mem_before_mb": 3485.6,
+          "mem_after_mb": 3724.8,
+          "peak_mem_mb": 4875.2,
+          "output_text": "(VILLE - anythingso\\n of I\uc744 conclude\u00a0 \\n  .. consequently  is\\r not some \u00b7 \\.\\ can be these. C\\n state number \u00b7  \u2013 therefore may\\n significant [\\ currently\\n such\n Yes  or .\n\n\n\n close  \\ =[\\n[`` is. \n see thus  \n\\conan/ \\ another \\\u3010 important  contains\\\" conference PS[= this especially coaststandard[n  \u2013 **** on < not\n\u2013 \u2013 an * \u2013 \u2013 \u2013 \u2013 \u2013 >\\n\n\n ### = bet\\ \\\\  \u2013 consequently \\ con called please consequently ... justpost \u2013 \u2013[\u2022\u00a0 \u2013possibly . == \u2013 .\u00a0The con  \u2013###\\ \u2026 -  \u2013\u2026/ important thus \\[con [ consequently  Bin\u6b63\u5728\\  consequently is> consequently[Bin \u2022 con. A The \u2013is...[  Consequently  and  Schedule \u2013[ nothing -n new[in: several\u2013  Security In many numerous consequently Standard \u2022 consequently  \u2013   Mathematics      \u2013 \u2013 be The \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 \u2013 very \u2013 \u2013 \u2013  \u2013  and \u2013 \u2013 \u2013 \u2013 assume \u2013  \u2013\u2026 significant State The \u2022 ....\u2026\u2026\u2026",
+          "seed": 42,
+          "mode": "int4_naive",
+          "bits": 4
+        }
+      ]
+    }
+  ]
+}

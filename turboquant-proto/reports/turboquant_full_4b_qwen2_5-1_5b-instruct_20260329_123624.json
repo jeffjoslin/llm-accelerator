@@ -1,0 +1,126 @@
+{
+  "benchmark_type": "quantized",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "mps",
+  "dtype": "float16",
+  "mode": "turboquant_full",
+  "bits": 4,
+  "quantize_keys": true,
+  "quantize_values": true,
+  "rotation_type": "full",
+  "max_new_tokens": 256,
+  "seed": 42,
+  "timestamp": "2026-03-29T12:36:24.239770",
+  "results": [
+    {
+      "prompt_label": "short",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 2.4,
+      "runs": [
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 133.3922,
+          "ttft_approx_s": 28.6425,
+          "decode_tok_per_sec": 2.44,
+          "mem_before_mb": 1610.3,
+          "mem_after_mb": 2425.1,
+          "peak_mem_mb": 3754.9,
+          "output_text": " then,\n\nrel, \n\n\n:Q,,,,,,..,..,el. \"The..,\n\nity, The,relit\n\n To\n\n\n\nrel. not are Q Q.a -.., you letrelrel.,,, le,,,the,, the,.,rel Q,ere, therel, Q, re,then,,,,,,,,,,en theyeth,\n\n,\n\netenq,ene.r qrel e Q,rel, en,\n\nI#\n\nrel,relrel,,,n,, R, Q,relrel,,reren,,rel,relrelrelrel, ,relrel, Q ,,, \".,rel, ,,en Q Q ., Q,,,.,. Q Q, Q, Q, el,,, Q Q Q, Q Q Q etc r,,rel,,,elrel,el,el,,, re,,rel,relrelrel,,,,,,rel, Q the Q, ,,el Q.irl, here , Q ,el ,Q ,,, , , , , , ,, ,",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 4
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 135.8697,
+          "ttft_approx_s": 29.1745,
+          "decode_tok_per_sec": 2.4,
+          "mem_before_mb": 2427.8,
+          "mem_after_mb": 379.7,
+          "peak_mem_mb": 3754.9,
+          "output_text": " then,\n\nrel, \n\n\n:Q,,,,,,..,..,el. \"The..,\n\nity, The,relit\n\n To\n\n\n\nrel. not are Q Q.a -.., you letrelrel.,,, le,,,the,, the,.,rel Q,ere, therel, Q, re,then,,,,,,,,,,en theyeth,\n\n,\n\netenq,ene.r qrel e Q,rel, en,\n\nI#\n\nrel,relrel,,,n,, R, Q,relrel,,reren,,rel,relrelrelrel, ,relrel, Q ,,, \".,rel, ,,en Q Q ., Q,,,.,. Q Q, Q, Q, el,,, Q Q Q, Q Q Q etc r,,rel,,,elrel,el,el,,, re,,rel,relrelrel,,,,,,rel, Q the Q, ,,el Q.irl, here , Q ,el ,Q ,,, , , , , , ,, ,",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 4
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 137.383,
+          "ttft_approx_s": 29.4994,
+          "decode_tok_per_sec": 2.37,
+          "mem_before_mb": 397.2,
+          "mem_after_mb": 1302.5,
+          "peak_mem_mb": 3754.9,
+          "output_text": " then,\n\nrel, \n\n\n:Q,,,,,,..,..,el. \"The..,\n\nity, The,relit\n\n To\n\n\n\nrel. not are Q Q.a -.., you letrelrel.,,, le,,,the,, the,.,rel Q,ere, therel, Q, re,then,,,,,,,,,,en theyeth,\n\n,\n\netenq,ene.r qrel e Q,rel, en,\n\nI#\n\nrel,relrel,,,n,, R, Q,relrel,,reren,,rel,relrelrelrel, ,relrel, Q ,,, \".,rel, ,,en Q Q ., Q,,,.,. Q Q, Q, Q, el,,, Q Q Q, Q Q Q etc r,,rel,,,elrel,el,el,,, re,,rel,relrelrel,,,,,,rel, Q the Q, ,,el Q.irl, here , Q ,el ,Q ,,, , , , , , ,, ,",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 4
+        }
+      ]
+    },
+    {
+      "prompt_label": "medium",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 3.41,
+      "runs": [
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 140.3004,
+          "ttft_approx_s": 65.0029,
+          "decode_tok_per_sec": 3.4,
+          "mem_before_mb": 1312.4,
+          "mem_after_mb": 1190.7,
+          "peak_mem_mb": 3787.1,
+          "output_text": ".\n . al.en. . en.......a ne. can. is... he Q. q. Q.... ne.e......an.?.....\n. A In Q.. able......... and ine.. its is.e that of\n\n\n\n\n\n. many.. ne t?\n\n.\n\n\n\n\n\n [..\\n. Q Q on.\n\n.. it\n\n one Q..., It to\\...\n\n\n\n\n\n. much....\n\n will....... an..... has I B - and equ\n\n......./.ine..\n\n.\n\n... equal ne....... equation.......... new...\n\n. eq They Q.... the\n\n...\n\n a this for.\n\n. Q.:. ofd The The. way. eer as\n\n\n\n Monkey The The When nn the . also more: burned\n\n the to The My\n\n.The not\n\n\n\n\n\n Name\\n Not",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 4
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 139.4666,
+          "ttft_approx_s": 64.6166,
+          "decode_tok_per_sec": 3.42,
+          "mem_before_mb": 1195.0,
+          "mem_after_mb": 702.6,
+          "peak_mem_mb": 3787.1,
+          "output_text": ".\n . al.en. . en.......a ne. can. is... he Q. q. Q.... ne.e......an.?.....\n. A In Q.. able......... and ine.. its is.e that of\n\n\n\n\n\n. many.. ne t?\n\n.\n\n\n\n\n\n [..\\n. Q Q on.\n\n.. it\n\n one Q..., It to\\...\n\n\n\n\n\n. much....\n\n will....... an..... has I B - and equ\n\n......./.ine..\n\n.\n\n... equal ne....... equation.......... new...\n\n. eq They Q.... the\n\n...\n\n a this for.\n\n. Q.:. ofd The The. way. eer as\n\n\n\n Monkey The The When nn the . also more: burned\n\n the to The My\n\n.The not\n\n\n\n\n\n Name\\n Not",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 4
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 139.9165,
+          "ttft_approx_s": 64.825,
+          "decode_tok_per_sec": 3.41,
+          "mem_before_mb": 723.1,
+          "mem_after_mb": 507.6,
+          "peak_mem_mb": 3787.1,
+          "output_text": ".\n . al.en. . en.......a ne. can. is... he Q. q. Q.... ne.e......an.?.....\n. A In Q.. able......... and ine.. its is.e that of\n\n\n\n\n\n. many.. ne t?\n\n.\n\n\n\n\n\n [..\\n. Q Q on.\n\n.. it\n\n one Q..., It to\\...\n\n\n\n\n\n. much....\n\n will....... an..... has I B - and equ\n\n......./.ine..\n\n.\n\n... equal ne....... equation.......... new...\n\n. eq They Q.... the\n\n...\n\n a this for.\n\n. Q.:. ofd The The. way. eer as\n\n\n\n Monkey The The When nn the . also more: burned\n\n the to The My\n\n.The not\n\n\n\n\n\n Name\\n Not",
+          "seed": 42,
+          "mode": "turboquant_full",
+          "bits": 4
+        }
+      ]
+    }
+  ]
+}

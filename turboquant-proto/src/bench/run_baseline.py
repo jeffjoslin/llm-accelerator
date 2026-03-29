@@ -97,7 +97,15 @@ def run_single_benchmark(
     if device == "cuda":
         torch.cuda.reset_peak_memory_stats()
 
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    # Apply chat template if the tokenizer has one (e.g. TinyLlama needs this)
+    if hasattr(tokenizer, "chat_template") and tokenizer.chat_template is not None:
+        messages = [{"role": "user", "content": prompt}]
+        formatted = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        inputs = tokenizer(formatted, return_tensors="pt").to(model.device)
+    else:
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     input_len = inputs["input_ids"].shape[1]
 
     mem_before = get_memory_mb()

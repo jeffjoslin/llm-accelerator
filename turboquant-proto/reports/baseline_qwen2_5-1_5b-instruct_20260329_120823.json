@@ -1,0 +1,109 @@
+{
+  "benchmark_type": "baseline",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "mps",
+  "dtype": "float16",
+  "max_new_tokens": 256,
+  "seed": 42,
+  "timestamp": "2026-03-29T12:08:23.203529",
+  "results": [
+    {
+      "prompt_label": "short",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 57.18,
+      "runs": [
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 7.0589,
+          "ttft_approx_s": 1.5157,
+          "decode_tok_per_sec": 46.18,
+          "mem_before_mb": 1638.9,
+          "mem_after_mb": 2580.2,
+          "peak_mem_mb": 3386.9,
+          "output_text": "General Relativity is a fundamental theory in physics that describes gravity as a curvature of spacetime caused by mass and energy. Here's an explanation of its key concepts:\n\n1. **Spacetime Curvature**: In General Relativity, space and time (spacetime) are not separate entities but rather two aspects of the same thing - a four-dimensional continuum. Massive objects cause this continuum to curve, which we perceive as gravity.\n\n2. **Gravitational Time Dilation**: This occurs when you move closer to a massive object like a star or planet. The stronger the gravitational field, the slower time passes. For example, clocks on Earth run slightly faster than those in orbit around the Sun due to the Sun\u2019s immense gravitational pull.\n\n3. **Equivalence Principle**: This states that the effects of gravity are indistinguishable from acceleration. It means that free-falling objects experience weightlessness because they are accelerating downward with the same force as if they were being pulled down by gravity. An elevator moving freely through space would feel no different from an elevator on Earth.\n\n### Real-World Examples\n\n**Spacetime Curvature:**\nImagine a ball rolling down a hill. As it rolls, the ground curves under it, causing the ball to accelerate towards the bottom.",
+          "seed": 42
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 5.2,
+          "ttft_approx_s": 1.1166,
+          "decode_tok_per_sec": 62.69,
+          "mem_before_mb": 2580.2,
+          "mem_after_mb": 2589.4,
+          "peak_mem_mb": 3386.9,
+          "output_text": "General Relativity is a fundamental theory in physics that describes gravity as a curvature of spacetime caused by mass and energy. Here's an explanation of its key concepts:\n\n1. **Spacetime Curvature**: In General Relativity, space and time (spacetime) are not separate entities but rather two aspects of the same thing - a four-dimensional continuum. Massive objects cause this continuum to curve, which we perceive as gravity.\n\n2. **Gravitational Time Dilation**: This occurs when you move closer to a massive object like a star or planet. The stronger the gravitational field, the slower time passes. For example, clocks on Earth run slightly faster than those in orbit around the Sun due to the Sun\u2019s immense gravitational pull.\n\n3. **Equivalence Principle**: This states that the effects of gravity are indistinguishable from acceleration. It means that free-falling objects experience weightlessness because they are accelerating downward with the same force as if they were being pulled down by gravity. An elevator moving freely through space would feel no different from an elevator on Earth.\n\n### Real-World Examples\n\n**Spacetime Curvature:**\nImagine a ball rolling down a hill. As it rolls, the ground curves under it, causing the ball to accelerate towards the bottom.",
+          "seed": 42
+        },
+        {
+          "prompt_label": "short",
+          "prompt_tokens": 70,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 5.2028,
+          "ttft_approx_s": 1.1172,
+          "decode_tok_per_sec": 62.66,
+          "mem_before_mb": 2589.4,
+          "mem_after_mb": 2597.9,
+          "peak_mem_mb": 3386.9,
+          "output_text": "General Relativity is a fundamental theory in physics that describes gravity as a curvature of spacetime caused by mass and energy. Here's an explanation of its key concepts:\n\n1. **Spacetime Curvature**: In General Relativity, space and time (spacetime) are not separate entities but rather two aspects of the same thing - a four-dimensional continuum. Massive objects cause this continuum to curve, which we perceive as gravity.\n\n2. **Gravitational Time Dilation**: This occurs when you move closer to a massive object like a star or planet. The stronger the gravitational field, the slower time passes. For example, clocks on Earth run slightly faster than those in orbit around the Sun due to the Sun\u2019s immense gravitational pull.\n\n3. **Equivalence Principle**: This states that the effects of gravity are indistinguishable from acceleration. It means that free-falling objects experience weightlessness because they are accelerating downward with the same force as if they were being pulled down by gravity. An elevator moving freely through space would feel no different from an elevator on Earth.\n\n### Real-World Examples\n\n**Spacetime Curvature:**\nImagine a ball rolling down a hill. As it rolls, the ground curves under it, causing the ball to accelerate towards the bottom.",
+          "seed": 42
+        }
+      ]
+    },
+    {
+      "prompt_label": "medium",
+      "num_runs": 3,
+      "mean_decode_tok_per_sec": 80.09,
+      "runs": [
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 6.5546,
+          "ttft_approx_s": 3.0368,
+          "decode_tok_per_sec": 72.77,
+          "mem_before_mb": 2597.9,
+          "mem_after_mb": 3072.3,
+          "peak_mem_mb": 3419.1,
+          "output_text": "# Modern Transformer-Based Language Models: A Comprehensive Overview\n\n## Introduction\n\nModern transformer-based language models have revolutionized natural language processing (NLP) by achieving state-of-the-art results on various NLP tasks such as translation, text summarization, question answering, and more. These models use a novel architecture called the \"Transformer,\" which is based on self-attention mechanisms rather than recurrent neural networks (RNNs). In this overview, we will delve into the key components of the transformer architecture, including the attention mechanism, multi-head attention, positional encoding, layer normalization, feed-forward networks, KV-caches, optimization techniques, scaling laws, and common challenges.\n\n## High-Level Architecture Overview\n\nThe core idea behind the transformer architecture is to replace sequential dependencies with parallel ones using self-attention. Unlike traditional RNNs that process sequences one element at a time, transformers treat all elements simultaneously through self-attention. This allows for much faster training times and better scalability compared to RNNs.\n\n### Self-Attention Mechanism\n\nSelf-attention computes weighted sums over all previous tokens in the sequence, allowing the model to capture long-range dependencies efficiently. Mathematically, if \\( \\mathbf{Q} \\), \\( \\mathbf{K} \\), and \\( \\",
+          "seed": 42
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 5.7155,
+          "ttft_approx_s": 2.6481,
+          "decode_tok_per_sec": 83.46,
+          "mem_before_mb": 3072.3,
+          "mem_after_mb": 3081.6,
+          "peak_mem_mb": 3419.1,
+          "output_text": "# Modern Transformer-Based Language Models: A Comprehensive Overview\n\n## Introduction\n\nModern transformer-based language models have revolutionized natural language processing (NLP) by achieving state-of-the-art results on various NLP tasks such as translation, text summarization, question answering, and more. These models use a novel architecture called the \"Transformer,\" which is based on self-attention mechanisms rather than recurrent neural networks (RNNs). In this overview, we will delve into the key components of the transformer architecture, including the attention mechanism, multi-head attention, positional encoding, layer normalization, feed-forward networks, KV-caches, optimization techniques, scaling laws, and common challenges.\n\n## High-Level Architecture Overview\n\nThe core idea behind the transformer architecture is to replace sequential dependencies with parallel ones using self-attention. Unlike traditional RNNs that process sequences one element at a time, transformers treat all elements simultaneously through self-attention. This allows for much faster training times and better scalability compared to RNNs.\n\n### Self-Attention Mechanism\n\nSelf-attention computes weighted sums over all previous tokens in the sequence, allowing the model to capture long-range dependencies efficiently. Mathematically, if \\( \\mathbf{Q} \\), \\( \\mathbf{K} \\), and \\( \\",
+          "seed": 42
+        },
+        {
+          "prompt_label": "medium",
+          "prompt_tokens": 221,
+          "max_new_tokens": 256,
+          "generated_tokens": 256,
+          "total_time_s": 5.6763,
+          "ttft_approx_s": 2.6299,
+          "decode_tok_per_sec": 84.03,
+          "mem_before_mb": 3081.7,
+          "mem_after_mb": 2400.8,
+          "peak_mem_mb": 3419.1,
+          "output_text": "# Modern Transformer-Based Language Models: A Comprehensive Overview\n\n## Introduction\n\nModern transformer-based language models have revolutionized natural language processing (NLP) by achieving state-of-the-art results on various NLP tasks such as translation, text summarization, question answering, and more. These models use a novel architecture called the \"Transformer,\" which is based on self-attention mechanisms rather than recurrent neural networks (RNNs). In this overview, we will delve into the key components of the transformer architecture, including the attention mechanism, multi-head attention, positional encoding, layer normalization, feed-forward networks, KV-caches, optimization techniques, scaling laws, and common challenges.\n\n## High-Level Architecture Overview\n\nThe core idea behind the transformer architecture is to replace sequential dependencies with parallel ones using self-attention. Unlike traditional RNNs that process sequences one element at a time, transformers treat all elements simultaneously through self-attention. This allows for much faster training times and better scalability compared to RNNs.\n\n### Self-Attention Mechanism\n\nSelf-attention computes weighted sums over all previous tokens in the sequence, allowing the model to capture long-range dependencies efficiently. Mathematically, if \\( \\mathbf{Q} \\), \\( \\mathbf{K} \\), and \\( \\",
+          "seed": 42
+        }
+      ]
+    }
+  ]
+}

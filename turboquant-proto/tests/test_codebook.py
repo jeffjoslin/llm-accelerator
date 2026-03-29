@@ -55,7 +55,7 @@ class TestComputeCodebook:
         support while still being optimal for MSE.
         """
         d = 128
-        bound = 2.0 / math.sqrt(d)  # generous bound: 2x the scale
+        bound = 5.0 / math.sqrt(d)  # generous bound: 5σ of the coordinate distribution
         for bits in [1, 2, 3, 4]:
             cb = compute_codebook(bits, d)
             assert (cb >= -bound).all(), f"bits={bits}: {cb.min()} < {-bound}"

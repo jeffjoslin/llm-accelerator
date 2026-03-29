@@ -1,0 +1,43 @@
+{
+  "baseline_file": "reports/baseline_qwen2_5-1_5b-instruct_20260329_120823.json",
+  "candidate_file": "reports/turboquant_mse_4b_qwen2_5-1_5b-instruct_20260329_122215.json",
+  "baseline_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "candidate_mode": "turboquant_mse",
+  "candidate_bits": 4,
+  "comparisons": [
+    {
+      "prompt_label": "short",
+      "exact_match": false,
+      "char_similarity": 0.0991,
+      "rouge_l": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "baseline_tok_per_sec": 46.18,
+      "candidate_tok_per_sec": 5.17,
+      "speed_ratio": 0.112,
+      "baseline_peak_mem_mb": 3386.9,
+      "candidate_peak_mem_mb": 4858.9,
+      "baseline_output_preview": "General Relativity is a fundamental theory in physics that describes gravity as a curvature of spacetime caused by mass and energy. Here's an explanation of its key concepts:\n\n1. **Spacetime Curvature",
+      "candidate_output_preview": " Wen\n\n.-ex.-w\n\n-w.....-wait-witen..-w-w..  wen-wa-ww. wit...  wen w. ...  .  1 .  . ... .... . .... ...........  ...-was.w.........  ........  ... .. ..   ..... w.ew.ew.eww...  . ...  .. ....ien. ...."
+    },
+    {
+      "prompt_label": "medium",
+      "exact_match": false,
+      "char_similarity": 0.1208,
+      "rouge_l": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "baseline_tok_per_sec": 72.77,
+      "candidate_tok_per_sec": 7.33,
+      "speed_ratio": 0.101,
+      "baseline_peak_mem_mb": 3419.1,
+      "candidate_peak_mem_mb": 4891.1,
+      "baseline_output_preview": "# Modern Transformer-Based Language Models: A Comprehensive Overview\n\n## Introduction\n\nModern transformer-based language models have revolutionized natural language processing (NLP) by achieving state",
+      "candidate_output_preview": " word\n\n\n\n encode\n\n. . write you can know? . learn ........\n\n. ......................... encult......encode.   ........ encoding  ................. ..... .......................................... enco"
+    }
+  ]
+}
